@@ -2,11 +2,15 @@
   <div class="container__g">
     <carousel>
       <carousel-slide>
-        Hi! here is the first one!
+        <div class="text">
+          Hi! here is the first one!
+        </div>
         <img src="./assets/img/watermelon.jpg" />
       </carousel-slide>
       <carousel-slide>
-        Hi! here is the second one!
+        <div class="text">
+          Hi! here is the second one!
+        </div>
         <img src="./assets/img/palms.jpg" />
       </carousel-slide>
     </carousel>
@@ -43,7 +47,11 @@ export default {
     display: grid;
     justify-content: center;
   }
-
+  .text {
+    position: absolute;
+    top: 33vh;
+    left: 41vw;
+  }
   img {
     width: 100%;
   }
