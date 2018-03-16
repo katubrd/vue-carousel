@@ -1,6 +1,6 @@
 <template lang="html">
   <transition :name="transition">
-    <div v-show="visible">
+    <div v-show="visible" class="container__slide">
       <!-- Index: {{ index }} -->
       <slot></slot>
     </div>
@@ -25,6 +25,9 @@
 </script>
 
 <style lang="css">
+  .container__slide {
+    width: 100%;
+  }
   .slide-right-enter-active{
     animation: slideRightIn .5s;
   }

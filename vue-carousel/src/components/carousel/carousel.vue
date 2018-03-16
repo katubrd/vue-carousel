@@ -56,6 +56,7 @@
   .carousel {
     position: relative;
     overflow: hidden;
+    width: 100vw;
   }
   .carousel__nav {
     position: absolute;

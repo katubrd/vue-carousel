@@ -1,17 +1,11 @@
 <template>
   <div class="container__g">
     <carousel>
-      <carousel-slide>
+      <carousel-slide v-for="n in slides">
         <div class="text">
-          Hi! here is the first one!
+          Slide {{ n }}
         </div>
-        <img src="./assets/img/watermelon.jpg" />
-      </carousel-slide>
-      <carousel-slide>
-        <div class="text">
-          Hi! here is the second one!
-        </div>
-        <img src="./assets/img/palms.jpg" />
+        <img :src="'http://lorempicsum.com/rio/630/300/' + n" />
       </carousel-slide>
     </carousel>
   </div>
@@ -25,9 +19,11 @@ export default {
   name: 'app',
   data () {
     return {
+      slides: 5
     }
   },
-  methods: {},
+  methods: {
+  },
   components: {
     Carousel,
     CarouselSlide
@@ -41,7 +37,7 @@ export default {
     padding: 0;
   }
   .container__g {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: relative;
     display: grid;
@@ -51,6 +47,9 @@ export default {
     position: absolute;
     top: 33vh;
     left: 41vw;
+    color: white;
+    font-size: 7em;
+    font-family: sans-serif;
   }
   img {
     width: 100%;
